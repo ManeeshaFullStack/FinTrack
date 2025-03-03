@@ -53,15 +53,16 @@
 
         <p class="login-para">Already a member? Log in here</p>
 
-        <button class="login-button">
-          <a href="../Login/login.html" target="_blank"><b> Login</b></a>
+        <button class="login-button" onclick="redirectToLogin()">
+          <!-- <a href="../Login/login.html" target="_blank"><b> Login</b></a> -->
+          <b> Login</b>
         </button>
       </div>
-      <!-- <script>
-        function login() {
-         <a>
+      <script>
+        function redirectToLogin() {
+          window.location = "../Login/login.html";
         }
-      </script> -->
+      </script>
     </div>
 
     <!------------------------------------------------------------------------------------------------->
