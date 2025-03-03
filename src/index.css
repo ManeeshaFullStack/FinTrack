@@ -136,6 +136,12 @@ body {
   border-radius: 10px;
   border-color: #d5ecfe;
 }
+.login-button a {
+  text-decoration: none;
+  color: #343a40;
+  font-size: 20px;
+}
+
 .login-para {
   font-size: 15px;
   color: #868e96;
@@ -688,7 +694,7 @@ body {
 
 /* Footer Styling */
 .footer {
-  background-color: #9cc8ba;
+  background-color: #9beed4;
   padding: 30px;
   color: black;
   text-align: center;
