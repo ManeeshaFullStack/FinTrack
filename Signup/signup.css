@@ -1,19 +1,30 @@
 body {
   margin: 0 auto;
   box-sizing: border-box;
+  /* background: rgb(55, 181, 254);
+  background: linear-gradient(
+    45deg,
+    rgba(55, 181, 254, 1) 0%,
+    rgba(55, 181, 254, 1) 28%,
+    rgba(9, 9, 121, 1) 76%
+  ); */
+  background-image: url(../src/img/img-1.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .signup-div {
   display: flex;
   max-width: 1000px;
   margin-top: 50px;
-  justify-self: center;
+  justify-self: right;
   /* padding: 16px 32px; */
   border: 1px solid #a5d8ff;
   max-height: 550px;
   border-radius: 20px;
   gap: 30px;
   box-shadow: 3px 0 20px #868e96, -3px 0 20px #868e96;
+  margin-right: 20px;
 }
 img {
   height: 100%;
@@ -48,6 +59,10 @@ h2 {
 }
 input::placeholder {
   color: #ced4da;
+}
+
+label {
+  font-size: 16px;
 }
 
 .button {
