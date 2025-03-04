@@ -26,7 +26,13 @@
         <a href="#" class="forgot-password">Forgot password?</a>
         <button class="login-btn">Login</button>
         <p class="do-not-have-account">Don't have an account?</p>
-        <button class="login-btn">Sign up</button>
+        <button onclick="redirectToSignup()" class="login-btn">Sign up</button>
+
+        <script>
+          function redirectToSignup() {
+            window.location = "../Signup/signup.html";
+          }
+        </script>
 
         <div class="back">
           <a href="../src/index.html">

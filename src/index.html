@@ -45,11 +45,17 @@
           one place. Sign up now and start managing your money smarter!"
         </p>
 
-        <button class="signin-button">
+        <button onclick="redirectToSignup()" class="signin-button">
           <a class="login-nav" href="#" target="self">
             <b> Get started on your financial journey today</b>
           </a>
         </button>
+
+        <script>
+          function redirectToSignup() {
+            window.location = "../Signup/signup.html";
+          }
+        </script>
 
         <p class="login-para">Already a member? Log in here</p>
 
