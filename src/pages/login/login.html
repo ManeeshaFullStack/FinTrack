@@ -24,13 +24,17 @@
           ></span>
         </div>
         <a href="#" class="forgot-password">Forgot password?</a>
-        <button class="login-btn">Login</button>
+        <button class="login-btn" onclick="redirectToDashboard()">Login</button>
         <p class="do-not-have-account">Don't have an account?</p>
         <button onclick="redirectToSignup()" class="login-btn">Sign up</button>
 
         <script>
           function redirectToSignup() {
             window.location = "../signup/signup.html";
+          }
+
+          function redirectToDashboard() {
+            window.location = "../dashboard/dashboard.html";
           }
         </script>
 
