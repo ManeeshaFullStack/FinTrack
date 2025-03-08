@@ -8,7 +8,7 @@ body {
     rgba(55, 181, 254, 1) 28%,
     rgba(9, 9, 121, 1) 76%
   ); */
-  background-image: url(../src/img/img-1.jpg);
+  background-image: url(../../img/img-1.jpg);
   background-position: center;
   background-size: cover;
 }
