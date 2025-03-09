@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Budget</title>
-    <link href="budget.css" type="text/css" rel="stylesheet" />
+    <title>Financial Goals</title>
+    <link href="goals.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
     <div class="main-header">
@@ -23,13 +23,10 @@
     </div>
     <div class="container">
       <div>
-        <h1>Budget management</h1>
+        <h1>Financial Goals</h1>
         <form>
-          <lable
-            class="label-name"
-            for="budgetDescription"
-            name="budgetDescription"
-            >Budget Description
+          <lable class="label-name" for="goalDescription" name="goalDescription"
+            >Goal Description
           </lable>
 
           <input
@@ -39,18 +36,13 @@
             placeholder="maximum 50 characters only"
           />
 
-          <lable class="label-name" for="budgetAmount" name="budgetAmount">
-            Budget Amount</lable
+          <lable class="label-name" for="goalAmount" name="goalAmount"
+            >Goal Amount</lable
           >
           <input type="number" placeholder="eg:20000" required />
 
-          <label class="label-name" for="startingDate" name="startingDate"
-            >Starting Date</label
-          >
-          <input type="date" required />
-
-          <label class="label-name" for="endingDate" name="endingDate"
-            >Ending Date</label
+          <label class="label-name" for="targerDate" name="targerDate"
+            >Target Date</label
           >
           <input type="date" required />
 
@@ -65,11 +57,9 @@
           <tr>
             <th>Description</th>
             <th>Amount</th>
-            <th>Starting Date</th>
-            <th>Ending Date</th>
+            <th>Target Date</th>
           </tr>
           <tr>
-            <td></td>
             <td></td>
             <td></td>
             <td></td>

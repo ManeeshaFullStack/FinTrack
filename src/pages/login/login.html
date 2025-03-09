@@ -11,6 +11,7 @@
       <div class="login-box">
         <h1>Welcome To Fintrack!</h1>
         <p class="divider">Log in with your email</p>
+       
         <input type="email" placeholder="Email" id="email" required />
         <div class="password-container">
           <input
@@ -23,10 +24,11 @@
             ><ion-icon class="login-icon" name="eye-outline"></ion-icon
           ></span>
         </div>
-        <a href="#" class="forgot-password">Forgot password?</a>
+        <a href="../forgot-password/forgot-password.html" class="forgot-password">Forgot password?</a>
         <button class="login-btn" onclick="redirectToDashboard()">Login</button>
         <p class="do-not-have-account">Don't have an account?</p>
         <button onclick="redirectToSignup()" class="login-btn">Sign up</button>
+        
 
         <script>
           function redirectToSignup() {

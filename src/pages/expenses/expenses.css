@@ -5,14 +5,14 @@ body {
   background-position: center;
   background-size: cover;
   background-color: #f8f9fa;
-  background: linear-gradient(
+  /* background: linear-gradient(
     60deg,
     #f8f9fa,
     hsla(210, 17%, 98%, 0.493),
     rgba(173, 181, 189, 0.616),
     #e9ecef,
     rgba(134, 142, 150, 0.752)
-  );
+  ); */
 }
 .main-header {
   display: flex;
@@ -52,8 +52,8 @@ body {
 .container {
   width: 400px;
   /* height: 600px; */
-  display: flex;
-  justify-self: left;
+  /* display: flex;
+  justify-self: left; */
   margin: 50px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -75,6 +75,7 @@ input {
   padding: 5px 10px;
   border-radius: 5px;
   border-color: #edf2ff;
+  text-overflow: ellipsis;
 }
 
 .category {
