@@ -191,35 +191,30 @@ p {
  FOOTER SECTION
 ************************************************ */
 
-/* Footer Container */
-/* Main footer container with white background */
 .section-footer {
-  background-color: #fff; /* White background */
-  color: #333; /* Dark text for readability */
+  background-color: #fff;
+  color: #333;
   padding: 40px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border-top: 1px solid #ddd; /* Subtle top border for separation */
+  border-top: 1px solid #ddd;
   font-family: Arial, sans-serif;
   gap: 20px;
   margin-top: 90px;
 }
 
-/* Styling for each content block (divs and navs) */
 .section-footer > div,
 .section-footer > nav {
-  flex: 1 1 200px; /* Flexible width with minimum of 200px */
+  flex: 1 1 200px;
   margin: 10px;
 }
 
-/* Logo image styling */
 .footer-img {
   width: 230px;
   margin-bottom: 15px;
 }
 
-/* Social icons styling */
 .footer-icon {
   font-size: 20px;
   color: #333;
@@ -231,7 +226,6 @@ p {
   color: #555;
 }
 
-/* Copyright text styling */
 .Copyright {
   font-size: 12px;
   margin-top: 20px;
@@ -244,7 +238,6 @@ p {
   color: #adb5bd;
 }
 
-/* Link styles for phone number and email */
 .number,
 .email {
   color: #333333bf;
@@ -259,7 +252,6 @@ p {
   color: #555;
 }
 
-/* Headings for each footer section */
 .footer-headding {
   font-size: 18px;
   margin-bottom: 10px;
@@ -289,9 +281,8 @@ p {
   color: #555;
 }
 
-/* Developer credits section styling */
 .dev-credits {
-  background-color: #f7f7f7; /* Light grey background for contrast */
+  background-color: #f7f7f7;
   text-align: center;
   padding: 15px;
   font-size: 12px;
@@ -307,7 +298,8 @@ p {
 }
 
 .dev-credits a:hover {
-  color: #555;
+  color: #140303;
+  text-decoration: underline;
 }
 
 .dev-credits {
