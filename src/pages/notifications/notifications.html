@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget & Goal Notifications</title>
+    <link rel="stylesheet" href="notifications.css" />
+  </head>
+  <body>
+    <div class="notifications-container">
+      <h2>Notifications</h2>
+      <div id="notifications"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const notifications = document.getElementById("notifications");
+        const storedNotifications =
+          JSON.parse(localStorage.getItem("notifications")) || [];
+
+        function renderNotifications() {
+          notifications.innerHTML = "";
+          storedNotifications.forEach((notif, index) => {
+            const notification = document.createElement("div");
+            notification.className = `notification ${notif.type}`;
+            notification.innerHTML = `${notif.message} <button class='clear-btn' onclick='removeNotification(${index})'>&times;</button>`;
+            notifications.appendChild(notification);
+          });
+        }
+
+        function addNotification(message, type) {
+          storedNotifications.push({ message, type });
+          localStorage.setItem(
+            "notifications",
+            JSON.stringify(storedNotifications)
+          );
+          renderNotifications();
+        }
+
+        window.removeNotification = function (index) {
+          storedNotifications.splice(index, 1);
+          localStorage.setItem(
+            "notifications",
+            JSON.stringify(storedNotifications)
+          );
+          renderNotifications();
+        };
+
+        function checkBudgetStatus(spent, budget) {
+          if (spent > budget) {
+            addNotification("Warning: You exceeded your budget!", "error");
+          } else if (spent > budget * 0.8) {
+            addNotification("Alert: Your budget is almost over!", "warning");
+          } else {
+            addNotification(
+              "Great! You are following your budget well.",
+              "success"
+            );
+          }
+        }
+
+        function checkGoalStatus(progress, total, expensesHigh) {
+          if (progress >= total) {
+            addNotification("Congrats! You achieved your goal!", "success");
+          } else if (progress >= total * 0.9) {
+            addNotification(
+              "You're very near to your goal! Keep going!",
+              "info"
+            );
+          } else if (expensesHigh) {
+            addNotification(
+              "Goal is going far! Your expenses are getting high.",
+              "error"
+            );
+          }
+        }
+
+        renderNotifications(); // Load stored notifications on page load
+      });
+    </script>
+  </body>
+</html>

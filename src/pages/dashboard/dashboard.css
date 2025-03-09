@@ -1,3 +1,13 @@
+/* Ensure the full page is covered */
+/* body,
+html {
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+} */
 body {
   font-family: sans-serif;
   box-sizing: border-box;
@@ -25,7 +35,11 @@ body {
   text-decoration: underline;
   color: #364fc7;
 }
-
+.all-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 .header-logo {
   height: 60px;
   width: 250px;
@@ -41,4 +55,134 @@ body {
 .main-navigations a {
   text-decoration: none;
   color: #1971c2;
+}
+
+.menu-container {
+  display: inline-block;
+  position: relative;
+}
+.menu-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background-color: #0c519c;
+}
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  right: 0;
+  min-width: 150px;
+}
+.menu-dropdown.show {
+  display: block;
+}
+.menu-dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+.menu-dropdown a:hover {
+  background: #f1f1f1;
+}
+
+/* Header */
+/* .main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  position: sticky;
+  top: 0;
+  border-bottom: 3px solid #1864ab;
+  background-color: #fff;
+} */
+
+/* Dashboard content */
+.dashboard-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Title & Subtitle */
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Charts Grid */
+.charts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-rows: repeat(2, 1fr); /* Two rows */
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+/* Individual Chart Box */
+.chart-box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s;
+  width: 500px;
+}
+
+.chart-box:hover {
+  transform: scale(1.05);
+}
+
+.chart-box canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Chart Text */
+.chart-box p {
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+/* Chart Links */
+.chart-box a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.chart-box a:hover {
+  background-color: #0056b3;
 }

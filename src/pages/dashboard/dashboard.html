@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dashboard</title>
     <link href="dashboard.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="main-header">
       <div>
         <img class="header-logo" src="../../img/logo 5.3.png" />
       </div>
-      <div>
+      <div class="all-links">
         <nav class="main-navigations">
           <a href="../income/income.html">income tracking</a>
           <a href="../expenses/expenses.html">expense tracking</a>
@@ -19,7 +20,111 @@
           <a href="../goals/goals.html">goal setting</a>
           <a href="../reports/reports.html">financial reports</a>
         </nav>
+        <div class="menu-container">
+          <button class="menu-button">Menu</button>
+          <div class="menu-dropdown">
+            <a href="../profile/profile.html">My Profile</a>
+            <a href="../change-password/changePassword.html">Change Password</a>
+            <a href="../notifications/notifications.html">Notifications</a>
+            <a href="../signout/signout.html">Sign Out</a>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="dashboard-content">
+      <h2>Welcome to Your Financial Dashboard</h2>
+      <p>See how your finances will look after you start using the system.</p>
+
+      <div class="charts-container">
+        <div class="chart-box">
+          <canvas id="incomeChart"></canvas>
+          <p>"Track your income, grow your wealth!"</p>
+          <a href="../income/income.html">Go to Income Tracking</a>
+        </div>
+        <div class="chart-box">
+          <canvas id="expenseChart"></canvas>
+          <p>"Control expenses, secure your future!"</p>
+          <a href="../expenses/expenses.html">Go to Expense Tracking</a>
+        </div>
+        <div class="chart-box">
+          <canvas id="budgetChart"></canvas>
+          <p>"Plan your budget, achieve your dreams!"</p>
+          <a href="../budget/budget.html">Go to Budget Management</a>
+        </div>
+        <div class="chart-box">
+          <canvas id="goalsChart"></canvas>
+          <p>"Set goals, accomplish milestones!"</p>
+          <a href="../goals/goals.html">Go to Goal Setting</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector(".menu-button");
+        const menuDropdown = document.querySelector(".menu-dropdown");
+
+        menuButton.addEventListener("click", function (event) {
+          event.stopPropagation();
+          menuDropdown.classList.toggle("show");
+        });
+
+        document.addEventListener("click", function () {
+          menuDropdown.classList.remove("show");
+        });
+
+        // Example chart data
+        const exampleData = {
+          income: [40, 30, 30],
+          expenses: [50, 20, 30],
+          budget: [60, 25, 15],
+          goals: [70, 15, 15],
+        };
+
+        function createChart(canvasId, data, labels, backgroundColors) {
+          new Chart(document.getElementById(canvasId), {
+            type: "pie",
+            data: {
+              labels: labels,
+              datasets: [
+                {
+                  data: data,
+                  backgroundColor: backgroundColors,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+            },
+          });
+        }
+
+        createChart(
+          "incomeChart",
+          exampleData.income,
+          ["Salary", "Freelance", "Investments"],
+          ["#4CAF50", "#FF9800", "#2196F3"]
+        );
+        createChart(
+          "expenseChart",
+          exampleData.expenses,
+          ["Housing", "Transport", "Food"],
+          ["#F44336", "#FFEB3B", "#03A9F4"]
+        );
+        createChart(
+          "budgetChart",
+          exampleData.budget,
+          ["Essentials", "Savings", "Leisure"],
+          ["#9C27B0", "#009688", "#FFC107"]
+        );
+        createChart(
+          "goalsChart",
+          exampleData.goals,
+          ["Short-term", "Mid-term", "Long-term"],
+          ["#673AB7", "#3F51B5", "#8BC34A"]
+        );
+      });
+    </script>
   </body>
 </html>
