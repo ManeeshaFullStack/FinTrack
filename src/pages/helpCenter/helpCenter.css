@@ -47,3 +47,46 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* #############################################################################################
+#########################    RESPONSIVE DESIGN    #######################################
+############################################################################################## */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+  .help-section {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+    font-size: 18px;
+  }
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+  .help-section {
+    padding: 8px;
+  }
+  footer {
+    padding: 8px;
+    font-size: 14px;
+  }
+}

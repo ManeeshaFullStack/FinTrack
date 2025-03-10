@@ -41,3 +41,78 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+/* -----------------------------------------------------------------------------------------------------
+-------------------------    responsive design     -----------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------- */
+
+/* Large screens and desktops (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .why-choose-container {
+    max-width: 90%;
+    gap: 20px;
+  }
+  .reason {
+    width: 45%;
+  }
+}
+
+/* Tablets and smaller laptops (max-width: 992px) */
+@media (max-width: 992px) {
+  .why-choose-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 30px;
+  }
+  .reason {
+    width: 100%;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .why-choose-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .reason {
+    width: 90%;
+    padding: 20px;
+  }
+
+  footer {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .why-choose-container {
+    padding: 15px;
+  }
+
+  .reason {
+    width: 95%;
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 10px;
+  }
+}

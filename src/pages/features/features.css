@@ -41,3 +41,42 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+/* #############################################################################################
+#########################    RESPONSIVE DESIGN    #######################################
+############################################################################################## */
+
+@media (max-width: 1024px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+  .feature {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 18px;
+    padding: 10px;
+  }
+  .feature {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+  }
+  footer {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

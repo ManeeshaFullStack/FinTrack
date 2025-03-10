@@ -65,3 +65,70 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* #############################################################################################
+#########################    RESPONSIVE DESIGN    #######################################
+############################################################################################## */
+
+/* Responsive Design for All Screens */
+
+/* Tablets and Smaller Laptops */
+@media (max-width: 1024px) {
+  .container {
+    width: 80%;
+    padding: 15px;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  .section {
+    padding: 12px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  header {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .section {
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  header {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 8px;
+  }
+
+  .section {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 6px;
+  }
+}

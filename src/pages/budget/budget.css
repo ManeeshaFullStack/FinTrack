@@ -121,5 +121,103 @@ input::placeholder {
 button:hover {
   background-color: #74c0fc;
 }
-.container:hover {
+
+/* #############################################################################################
+#########################    RESPONSIVE DESIGN    #######################################
+############################################################################################## */
+
+@media (max-width: 1024px) {
+  .container {
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+  .summary-table {
+    margin-left: 20px;
+  }
+  .summary-table table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .main-navigations {
+    gap: 15px;
+    font-size: 16px;
+  }
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+  .summary-table {
+    margin-left: 10px;
+  }
+  .summary-table table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    height: 50px;
+    width: 180px;
+  }
+  .main-navigations {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+  }
+  .container {
+    width: 90%;
+    padding: 10px;
+    margin: 15px auto;
+  }
+  input {
+    width: 100%;
+  }
+  button {
+    font-size: 16px;
+    padding: 8px;
+  }
+  .summary-table {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+  .summary-table table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-logo {
+    height: 40px;
+    width: 150px;
+  }
+  .container {
+    width: 95%;
+    padding: 8px;
+    margin: 10px auto;
+  }
+  input {
+    width: 100%;
+    padding: 6px;
+  }
+  button {
+    font-size: 14px;
+    padding: 6px;
+  }
+  .summary-table {
+    flex-direction: column;
+    align-items: center;
+  }
+  .summary-table table {
+    width: 100%;
+  }
 }

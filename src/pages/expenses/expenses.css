@@ -129,5 +129,63 @@ input::placeholder {
 button:hover {
   background-color: #74c0fc;
 }
-.container:hover {
+
+/* #############################################################################################
+#########################    RESPONSIVE DESIGN    #######################################
+############################################################################################## */
+
+@media (max-width: 1024px) {
+  .container {
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+  .main-navigations {
+    gap: 20px;
+  }
+  .header-logo {
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .main-navigations {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .container {
+    width: 80%;
+  }
+  .summary-table {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    width: 150px;
+  }
+  .main-navigations {
+    font-size: 16px;
+  }
+  .container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+  .summary-table table {
+    width: 100%;
+  }
+  button {
+    font-size: 18px;
+    padding: 8px;
+  }
 }

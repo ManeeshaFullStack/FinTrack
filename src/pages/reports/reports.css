@@ -122,5 +122,91 @@ input::placeholder {
 button:hover {
   background-color: #74c0fc;
 }
-.container:hover {
+
+/* -----------------------------------------------------------------------------------------
+------------------------   RESPONSIVE DESIGN    -----------------------------------------------------------
+----------------------------------------------------------------------------------------- */
+
+/* Default styles apply to larger screens (desktops and laptops) */
+
+/* Tablets and smaller screens */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  .summary-table {
+    margin-left: 20px;
+  }
+
+  .summary-table table {
+    width: 100%;
+  }
+}
+
+/* Mobile devices (portrait and landscape) */
+@media screen and (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .main-navigations {
+    flex-direction: column;
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  input,
+  .category {
+    width: 100%;
+  }
+
+  .summary-table {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .summary-table table {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Small mobile devices (very small screens) */
+@media screen and (max-width: 480px) {
+  .header-logo {
+    width: 180px;
+    height: 50px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .summary-table th,
+  .summary-table td {
+    font-size: 12px;
+    padding: 3px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 8px;
+  }
 }

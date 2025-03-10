@@ -88,3 +88,71 @@ button {
     transform: scale(1);
   }
 }
+
+/* -----------------------------------------------------------------------------------------
+------------------------   RESPONSIVE DESIGN    -----------------------------------------------------------
+----------------------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .signout-box {
+    padding: 25px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signout-box {
+    padding: 20px;
+    width: 80%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+    width: 100%;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signout-box {
+    padding: 18px;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 6px 10px;
+    width: 100%;
+  }
+}
