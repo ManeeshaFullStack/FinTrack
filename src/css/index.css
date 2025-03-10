@@ -738,6 +738,7 @@ body {
 
 .footer-section a:hover {
   text-decoration: underline;
+  color: #1c7ed6;
 }
 
 /* Footer Bottom */
@@ -755,6 +756,10 @@ body {
 
 .footer-bottom a {
   color: black;
+  font-weight: bold;
+}
+.footer-bottom a:hover {
+  color: #1864ab;
 }
 
 .back-to-top {
